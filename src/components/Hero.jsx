@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { div } from "framer-motion/client";
 import { useEffect, useRef, useState } from "react";
+import ButtonGradient from "../assets/svg/ButtonGradient";
 
 const Hero = () => {
   return (
