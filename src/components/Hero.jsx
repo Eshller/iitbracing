@@ -96,19 +96,19 @@ const squareData = [
   },
   {
     id: 13,
-    src: "/gallery/gall1.webp",
+    src: "/gall1.webp",
   },
   {
     id: 14,
-    src: "/gallery/gall2.webp",
+    src: "/gall2.webp",
   },
   {
     id: 15,
-    src: "/gallery/gall3.webp",
+    src: "/gall3.webp",
   },
   {
     id: 16,
-    src: "/gallery/gall4.webp",
+    src: "/gall4.webp",
   },
 ];
 

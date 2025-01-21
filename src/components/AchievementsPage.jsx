@@ -27,7 +27,7 @@ export default function AchievementsPage() {
                             ✅ Special award for best control
                         </div>
                     </div>
-                    <img src="/achievements/a2024.jpeg" className="w-full h-full" alt="" />
+                    <img src="/a2024.jpeg" className="w-full h-full" alt="" />
                 </div>
             ),
         },
@@ -54,7 +54,7 @@ export default function AchievementsPage() {
                             ✅ 3rd in real world AI
                         </div>
                     </div>
-                    <img src="/achievements/a2022.jpeg" className="w-full h-full" alt="" />
+                    <img src="/a2022.jpeg" className="w-full h-full" alt="" />
                 </div>
             ),
         },

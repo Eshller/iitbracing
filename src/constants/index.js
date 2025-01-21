@@ -339,122 +339,122 @@ export const teamMembers = [
   {
     name: 'Aman Kumar',
     designation: 'Chief Technical Officer',
-    image: 'team/CT/AmanKumarCTO.jpg'
+    image: '/AmanKumarCTO.jpg'
   },
   {
     name: 'Aryan Chauhan',
     designation: 'Chief Operations Officer',
-    image: 'team/CT/AryanChauhanCOO.jpg'
+    image: '/AryanChauhanCOO.jpg'
   },
   {
     name: 'Deep Boliya',
     designation: 'Chief Technical Officer',
-    image: 'team/CT/DeepBoliyaCTO.jpeg'
+    image: '/DeepBoliyaCTO.jpeg'
   },
   {
     name: 'Fahad Ahmad',
     designation: 'Chief Technical Officer',
-    image: 'team/CT/FahadAhmadCTO.jpeg'
+    image: '/FahadAhmadCTO.jpeg'
   },
   {
     name: 'Harsh Nikam',
     designation: 'Team Leader',
-    image: 'team/CT/HarshNikamTL.jpg'
+    image: '/HarshNikamTL.jpg'
   },
   {
     name: 'Himanshu Poonia',
     designation: 'Chief Strategy & Marketing Officer',
-    image: 'team/CT/HimanshuPooniaCSMO.jpg'
+    image: '/HimanshuPooniaCSMO.jpg'
   },
   {
     name: 'Prakhar Tiwari',
     designation: 'Project Manager',
-    image: 'team/CT/PrakharTiwariPM.jpg'
+    image: '/PrakharTiwariPM.jpg'
   },
   {
     name: 'Saurabh Prajapati',
     designation: 'Chief Technical Officer',
-    image: 'team/CT/SaurabhPrajapatiCTO.png'
+    image: '/SaurabhPrajapatiCTO.png'
   },
   {
     name: 'Yash Rampuria',
     designation: 'Chief Technical Officer',
-    image: 'team/CT/YashRampuriaCTO.jpg'
+    image: '/YashRampuriaCTO.jpg'
   },
   {
     name: 'Abhijith Vinod',
     designation: 'Design Engineer',
-    image: 'team/DE-Manager/AbhijithVinodDE.jpg'
+    image: '/AbhijithVinodDE.jpg'
   },
   {
     name: 'Abhinav Jaychandran',
     designation: 'Design Engineer',
-    image: 'team/DE-Manager/AbhinavJaychandranDE.jpg'
+    image: '/AbhinavJaychandranDE.jpg'
   },
   {
     name: 'Ajinkya Pawar',
     designation: 'Design Engineer',
-    image: 'team/DE-Manager/AjinkyaPawarDE.jpg'
+    image: '/AjinkyaPawarDE.jpg'
   },
   {
     name: 'Aniket Patel',
     designation: 'Design Engineer',
-    image: 'team/DE-Manager/AniketPatelDE.jpg'
+    image: '/AniketPatelDE.jpg'
   },
   {
     name: 'Atharva Kasar',
     designation: 'Design Engineer',
-    image: 'team/DE-Manager/AtharvaKasarDE.png'
+    image: '/AtharvaKasarDE.png'
   },
   {
     name: 'Chaitanya Meena',
     designation: 'Manager',
-    image: 'team/DE-Manager/ChaitanyaMeenaM.png'
+    image: '/ChaitanyaMeenaM.png'
   },
   {
     name: 'Dileep Devarajan',
     designation: 'Design Engineer',
-    image: 'team/DE-Manager/DileepDevarajanDE.jpg'
+    image: '/DileepDevarajanDE.jpg'
   },
   {
     name: 'Nikhil Meena',
     designation: 'Design Engineer',
-    image: 'team/DE-Manager/NikhilMeenaDE.png'
+    image: '/NikhilMeenaDE.png'
   },
   {
     name: 'Rahil Dedhia',
     designation: 'Design Engineer',
-    image: 'team/DE-Manager/RahilDedhiaDE.jpg'
+    image: '/RahilDedhiaDE.jpg'
   },
   {
     name: 'Rohan Arrvind',
     designation: 'Design Engineer',
-    image: 'team/DE-Manager/RohanArrvindDE.jpg'
+    image: '/RohanArrvindDE.jpg'
   },
   {
     name: 'Rohan Chowdhury',
     designation: 'Design Engineer',
-    image: 'team/DE-Manager/RohanChowdhuryDE.jpeg'
+    image: '/RohanChowdhuryDE.jpeg'
   },
   {
     name: 'Ruchi Jain',
     designation: 'Design Engineer',
-    image: 'team/DE-Manager/RuchiJainDE.jpg'
+    image: '/RuchiJainDE.jpg'
   },
   {
     name: 'Shubham Agarwal',
     designation: 'Design Engineer',
-    image: 'team/DE-Manager/ShubhamAgarwalDE.png'
+    image: '/ShubhamAgarwalDE.png'
   },
   {
     name: 'Utkarsh Prakash',
     designation: 'Design Engineer',
-    image: 'team/DE-Manager/UtkarshPrakashDE.jpg'
+    image: '/UtkarshPrakashDE.jpg'
   },
   {
     name: 'Vedant Tayade',
     designation: 'Design Engineer',
-    image: 'team/DE-Manager/VedantTayadeDE.jpg'
+    image: '/VedantTayadeDE.jpg'
   },
 ];
 
@@ -462,196 +462,196 @@ export const sponsors = [
   {
     id: 1,
     title: "Godrej and Boyce",
-    image: "sponsors/1.png",
+    image: "/1.png",
   },
   {
     id: 2,
     title: "PCB Power Market",
-    image: "sponsors/2.png",
+    image: "/2.png",
   },
   {
     id: 3,
     title: "Matter",
-    image: "sponsors/3.png",
+    image: "/3.png",
   },
   {
     id: 4,
     title: "TE Connectivity",
-    image: "sponsors/4.png",
+    image: "/4.png",
   },
   {
     id: 5,
     title: "Harness Techniques",
-    image: "sponsors/5.png",
+    image: "/5.png",
   },
   {
     id: 6,
     title: "Eshway",
-    image: "sponsors/6.png",
+    image: "/6.png",
   },
   {
     id: 7,
     title: "Velodyne",
-    image: "sponsors/7.png",
+    image: "/7.png",
   },
   {
     id: 8,
     title: "Analog Devices",
-    image: "sponsors/8.png",
+    image: "/8.png",
   },
   {
     id: 9,
     title: "NVIDIA",
-    image: "sponsors/9.png",
+    image: "/9.png",
   },
   {
     id: 10,
     title: "San Instruments",
-    image: "sponsors/10.png",
+    image: "/10.png",
   },
   {
     id: 11,
     title: "Tesla",
-    image: "sponsors/11.png",
+    image: "/11.png",
   },
   {
     id: 12,
     title: "IPG",
-    image: "sponsors/12.png",
+    image: "/12.png",
   },
   {
     id: 13,
     title: "Ajmera Indi-Karting",
-    image: "sponsors/13.png",
+    image: "/13.png",
   },
   {
     id: 14,
     title: "Ansys",
-    image: "sponsors/14.png",
+    image: "/14.png",
   },
   {
     id: 15,
     title: "Altium",
-    image: "sponsors/15.png",
+    image: "/15.png",
   },
   {
     id: 16,
     title: "Rapid Harness",
-    image: "sponsors/16.png",
+    image: "/16.png",
   },
   {
     id: 17,
     title: "Infineon",
-    image: "sponsors/17.png",
+    image: "/17.png",
   },
   {
     id: 18,
     title: "Bhor",
-    image: "sponsors/18.webp",
+    image: "/18.webp",
   },
   {
     id: 19,
     title: "3dconnexion",
-    image: "sponsors/19.webp",
+    image: "/19.webp",
   },
   {
     id: 20,
     title: "Zuken",
-    image: "sponsors/20.png",
+    image: "/20.png",
   },
   {
     id: 21,
     title: "Sim-Scale",
-    image: "sponsors/21.png",
+    image: "/21.png",
   },
   {
     id: 22,
     title: "SBG Systems",
-    image: "sponsors/22.png",
+    image: "/22.png",
   },
 ];
 
 export const images = [
   {
     id: 1,
-    src: "/gallery/gall1.webp",
+    src: "/gall1.webp",
     alt: "Racing car on track",
     title: "Championship Race 2024",
     category: "Technical"
   },
   {
     id: 2,
-    src: "/gallery/gall2.webp",
+    src: "/gall2.webp",
     alt: "Team working on car",
     title: "Pit Stop Preparation",
     category: "Team"
   },
   {
     id: 3,
-    src: "/gallery/gall3.webp",
+    src: "/gall3.webp",
     alt: "Car detail shot",
     title: "Engine Assembly",
     category: "Team"
   },
   {
     id: 4,
-    src: "/gallery/gall4.webp",
+    src: "/gall4.webp",
     alt: "Team photo",
     title: "Team Victory",
     category: "Technical"
   },
   {
     id: 5,
-    src: "/gallery/gall5.webp",
+    src: "/gall5.webp",
     alt: "Car in motion",
     title: "Testing Day",
     category: "Technical"
   },
   {
     id: 6,
-    src: "/gallery/gall6.webp",
+    src: "/gall6.webp",
     alt: "Technical inspection",
     title: "Pre-race Check",
     category: "Team"
   },
   {
     id: 7,
-    src: "/gallery/gall7.webp",
+    src: "/gall7.webp",
     alt: "Technical inspection",
     title: "Pre-race Check",
     category: "Team"
   },
   {
     id: 8,
-    src: "/gallery/gall8.webp",
+    src: "/gall8.webp",
     alt: "Technical inspection",
     title: "Pre-race Check",
     category: "Team"
   },
   {
     id: 9,
-    src: "/gallery/gall9.webp",
+    src: "/gall9.webp",
     alt: "Technical inspection",
     title: "Pre-race Check",
     category: "Technical"
   },
   {
     id: 10,
-    src: "/gallery/gall10.webp",
+    src: "/gall10.webp",
     alt: "Technical inspection",
     title: "Pre-race Check",
     category: "Racing"
   },
   {
     id: 11,
-    src: "/gallery/gall11.webp",
+    src: "/gall11.webp",
     alt: "Technical inspection",
     title: "Pre-race Check",
     category: "Racing"
   },
   {
     id: 12,
-    src: "/gallery/gall12.webp",
+    src: "/gall12.webp",
     alt: "Technical inspection",
     title: "Pre-race Check",
     category: "Technical"

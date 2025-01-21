@@ -12,7 +12,7 @@ const SponsorsPage = () => {
                     <div className="mx-auto max-w-3xl text-center">
                         <div className="flex flex-col justify-center items-center">
                             <a href="https://www.nrbbearings.com/" className="mx-4 flex w-100 items-center justify-center hover:bg-gray-600 transition-all p-10 ">
-                                <img src="/sponsors/nrb.png" className="invert w-full md:h-40 h-full" />
+                                <img src="/nrb.png" className="invert w-full md:h-40 h-full" />
                             </a><span className="text-gray-600"></span>
                         </div>
                         <h1 className="text-3xl font-extrabold text-gray-800 sm:text-5xl">
