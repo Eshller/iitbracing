@@ -176,7 +176,7 @@ const TeamPage = () => {
             <section className="relative py-16 md:py-24">
                 <div
                     className="absolute inset-0 bg-center bg-cover"
-                    style={{ backgroundImage: "url('/gall6.webp')" }}
+                    style={{ backgroundImage: "url('/new/team2.png')" }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/70 to-black/80" />
 
