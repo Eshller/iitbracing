@@ -1,11 +1,12 @@
 import React from "react";
 import Section from "./Section";
+import { hr } from "framer-motion/client";
 
 const Footer = () => {
-  return (
-    <Section crosses className="!px-0 !py-0 bg-black">
+  return (<>
+<hr className="border-0 h-[2px] bg-gradient-to-r from-[#9D17A2] to-[#3A093C] opacity-80 rounded-full" />
       <footer className="bg-black text-white">
-        <div className="container mx-auto px-4 py-16">
+        <div className="container py-16">
           {/* Main Footer Content */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
             {/* Left: About Racing Team */}
@@ -62,7 +63,8 @@ const Footer = () => {
           </p>
         </div>
       </footer>
-    </Section>
+  </>
+
   );
 };
 

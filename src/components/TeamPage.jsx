@@ -82,20 +82,43 @@ const TeamMemberCard = React.memo(({ member, className = '' }) => {
     );
 });
 
-// Tilted card for Managers section
-const TiltedCard = ({ member, tilt = 0, size = 'md', className = '' }) => {
-    const sizes = {
-        sm: 'w-40 h-56',
-        md: 'w-56 h-80',
-        lg: 'w-64 h-[22rem]'
-    };
+// Manager card with large framed photo
+const ManagerCard = ({ member, showButton = false, className = '' }) => {
+    const [isLoaded, setIsLoaded] = useState(false);
 
     return (
-        <div
-            className={`relative ${sizes[size]} rounded-xl overflow-hidden shadow-2xl bg-n-8/40 backdrop-blur-sm border border-n-12/30 ${className}`}
-            style={{ transform: `rotate(${tilt}deg)` }}
-        >
-            <TeamMemberCard member={member} />
+        <div className={`flex flex-col items-center text-center ${className}`}>
+            {/* Large Framed Photo */}
+            <div className="relative w-72 h-96 mb-6 rounded-lg overflow-hidden border-4 border-[#2a2a4a] shadow-2xl bg-[#1a1a2e]">
+                {!isLoaded && (
+                    <div className="absolute inset-0 bg-gray-800 animate-pulse" />
+                )}
+                <img
+                    src={member.image}
+                    alt={member.name}
+                    className={`w-full h-full object-cover transition-all duration-500 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
+                    onLoad={() => setIsLoaded(true)}
+                />
+            </div>
+
+            {/* Name with rounded border */}
+            <div className="inline-block px-8 py-2 mb-3 border-2 border-white/30 rounded-full">
+                <h3 className="text-2xl font-semibold text-white uppercase tracking-wide">
+                    {member.name}
+                </h3>
+            </div>
+
+            {/* Designation */}
+            <p className="text-xl font-bold text-white mb-4">
+                {member.designation}
+            </p>
+
+            {/* View Profile Button - only for center card */}
+            {showButton && (
+                <button className="px-8 py-3 rounded-full bg-[#2d3bff] text-white text-base font-semibold shadow-lg hover:bg-[#2430cc] transition-all">
+                    VIEW PROFILE
+                </button>
+            )}
         </div>
     );
 };
@@ -135,7 +158,7 @@ const TeamPage = () => {
             <section className="relative h-[70vh] min-h-[28rem] w-full">
                 <div
                     className="absolute inset-0 bg-center bg-cover"
-                    style={{ backgroundImage: "url('/gall4.webp')" }}
+                    style={{ backgroundImage: "url('/new/team.png')" }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/60 to-black/80" />
 
@@ -172,35 +195,22 @@ IIT Bombay Racing is Asia’s premier Formula Student team with over 80 dedicate
                 </div>
             </Section>
 
-            {/* MANAGERS: three tilted cards */}
+            {/* MANAGERS: three cards in a row */}
             <Section className="px-4 sm:px-6 lg:px-8 bg-black">
                 <div className="max-w-7xl mx-auto">
-                    <div className="text-center mb-10">
+                    <div className="text-center mb-12">
                         <h2 className="text-5xl md:text-6xl font-extrabold tracking-wide text-white">MANAGERS</h2>
                     </div>
 
-                    <div className="relative flex items-end justify-center gap-6 md:gap-10 py-8 flex-wrap">
-                        {/* Left (tilted) */}
-                        <div className="hidden md:block translate-y-6 opacity-90">
-                            <TiltedCard member={managers[0]} tilt={-8} size="md" />
-                        </div>
+                    <div className="flex flex-wrap items-start justify-center gap-8 md:gap-12 lg:gap-16">
+                        {/* Left Manager */}
+                        <ManagerCard member={managers[0]} />
 
-                        {/* Center prominent */}
-                        <div className="z-10">
-                            <div className="relative">
-                                <TiltedCard member={managers[1] || managers[0]} tilt={0} size="lg" />
-                                <div className="absolute -bottom-6 left-1/2 -translate-x-1/2">
-                                    <div className="px-6 py-3 rounded-full bg-[#2d3bff] text-white text-sm font-semibold shadow-lg hover:bg-[#2430cc] transition-all cursor-pointer">
-                                        VIEW PROFILE
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        {/* Center Manager with View Profile button */}
+                        <ManagerCard member={managers[1] || managers[0]} showButton={true} />
 
-                        {/* Right (tilted) */}
-                        <div className="hidden md:block translate-y-6 opacity-90">
-                            <TiltedCard member={managers[2] || managers[0]} tilt={8} size="md" />
-                        </div>
+                        {/* Right Manager */}
+                        <ManagerCard member={managers[2] || managers[0]} />
                     </div>
                 </div>
             </Section>
