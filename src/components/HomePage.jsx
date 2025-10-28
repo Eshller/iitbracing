@@ -15,14 +15,15 @@ const HomePage = () => {
             <div className="pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden">
                 <Header />
                 <Hero />
+                <img src="/new/hero2.png" className="w-full" alt="" />
                 <OurMission />
                 {/* <Benefits /> */}
                 <OurTeam />
-                <Features />
+                {/* <Features /> */}
                 {/* <Collaboration /> */}
-                <Services />
-                <OurAchievements />
-                <OurCars />
+                {/* <Services /> */}
+                {/* <OurAchievements /> */}
+                {/* <OurCars /> */}
                 {/* <Pricing />
         <Roadmap /> */}
                 <Footer />
