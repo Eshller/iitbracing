@@ -6,7 +6,7 @@ import Hero from "./Hero";
 import OurAchievements from "./OurAchievements";
 import { OurCars } from "./OurCars";
 import OurMission from "./OurMission";
-import OurTeam from "./OurTeam";
+import OurSystem from "./OurTeam";
 import Services from "./Services";
 
 const HomePage = () => {
@@ -18,7 +18,7 @@ const HomePage = () => {
                 <img src="/new/hero2.png" className="w-full" alt="" />
                 <OurMission />
                 {/* <Benefits /> */}
-                <OurTeam />
+                <OurSystem />
                 {/* <Features /> */}
                 {/* <Collaboration /> */}
                 {/* <Services /> */}

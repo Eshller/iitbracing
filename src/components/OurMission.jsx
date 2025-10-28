@@ -76,14 +76,14 @@ const OurMission = () => {
                 </div>
 
                 {/* Engineering the Future */}
-                <div className="text-center py-12">
+                {/* <div className="text-center py-12">
                     <h3 className="text-3xl md:text-4xl font-bold mb-6">
                         Engineering the Future
                     </h3>
                     <p className="text-lg md:text-xl text-white/90 max-w-4xl mx-auto">
                         At IIT Bombay Racing, we're on a mission to engineer a brighter, greener future through innovation, dedication, and teamwork.
                     </p>
-                </div>
+                </div> */}
             </div>
         </section>
     );

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const OurTeam = () => {
+const OurSystem = () => {
     return (
         <section className="bg-black text-white py-16 md:py-24">
             <div className="container mx-auto px-4 md:px-8">
@@ -73,4 +73,4 @@ const OurTeam = () => {
     );
 };
 
-export default OurTeam;
+export default OurSystem;
