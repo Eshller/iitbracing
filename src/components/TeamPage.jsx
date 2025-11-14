@@ -123,16 +123,23 @@ const ManagerCard = ({ member, showButton = false, className = '' }) => {
     );
 };
 
-// Team section with title
-const TeamSection = React.memo(({ members, title }) => (
-    <div className="text-n-8">
-        <div className="text-center mb-10">
-            <h2 className="text-5xl md:text-6xl font-extrabold tracking-wide text-white">{title}</h2>
-        </div>
-        <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-            {members.map((member, index) => (
-                <TeamMemberCard key={index} member={member} />
-            ))}
+// Team section with title and purple gradient line
+const TeamSection = React.memo(({ members, title, bgColor = "bg-[#1a1a2e]" }) => (
+    <div className="text-white">
+        <div className="w-full">
+            <hr className="border-0 h-[2px] bg-gradient-to-r from-[#9D17A2] to-[#3A093C] mb-8" />
+            <div className={`${bgColor} py-12`}>
+                <div className="text-center mb-12">
+                    <h2 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-wide text-white uppercase">{title}</h2>
+                </div>
+                <div className="container mx-auto px-4 md:px-8">
+                    <div className="grid gap-8 md:gap-12 lg:gap-16 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+                        {members.map((member, index) => (
+                            <TeamMemberCard key={index} member={member} />
+                        ))}
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 ));
@@ -149,6 +156,21 @@ const TeamPage = () => {
         const fill = nonCore.filter((m) => !combined.includes(m));
         return [...combined, ...fill].slice(0, 3);
     }, [nonCore]);
+
+    // Carousel state for managers
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    const handlePrevManager = () => {
+        setCurrentIndex((prev) => (prev === 0 ? managers.length - 1 : prev - 1));
+    };
+
+    const handleNextManager = () => {
+        setCurrentIndex((prev) => (prev === managers.length - 1 ? 0 : prev + 1));
+    };
+
+    const getManagerIndex = (offset) => {
+        return (currentIndex + offset + managers.length) % managers.length;
+    };
 
     return (
         <div className="overflow-hidden bg-black">
@@ -188,32 +210,58 @@ IIT Bombay Racing is Asia’s premier Formula Student team with over 80 dedicate
                 </div>
             </section>
 
-            {/* CORE TEAM grid */}
-            <Section className="px-4 sm:px-6 lg:px-8 bg-black">
-                <div className="max-w-7xl mx-auto">
-                    <TeamSection title="CORE TEAM" members={coreTeam} />
-                </div>
-            </Section>
+            {/* CORE TEAM grid with dark navy background */}
+            <TeamSection title="CORE TEAM" members={coreTeam} bgColor="bg-[#1a1a2e]" />
 
-            {/* MANAGERS: three cards in a row */}
-            <Section className="px-4 sm:px-6 lg:px-8 bg-black">
-                <div className="max-w-7xl mx-auto">
-                    <div className="text-center mb-12">
-                        <h2 className="text-5xl md:text-6xl font-extrabold tracking-wide text-white">MANAGERS</h2>
+            {/* MANAGERS: carousel with tilted side cards */}
+            <div className="w-full">
+                <hr className="border-0 h-[2px] bg-gradient-to-r from-[#9D17A2] to-[#3A093C]" />
+                <div className="bg-[#1a1a2e] py-12">
+                    <div className="container mx-auto px-4 md:px-8">
+                        <div className="text-center mb-12">
+                            <h2 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-wide text-white uppercase">MANAGERS</h2>
+                        </div>
+
+                        <div className="relative flex items-center justify-center min-h-[600px]">
+                            {/* Left Card - Tilted */}
+                            <div className="absolute left-0 md:left-12 lg:left-24 z-10 transform -rotate-12 scale-75 opacity-70 transition-all duration-300 hover:opacity-90">
+                                <ManagerCard member={managers[getManagerIndex(-1)]} />
+                            </div>
+
+                            {/* Center Card - Main Focus */}
+                            <div className="relative z-20 transition-all duration-300">
+                                <ManagerCard member={managers[currentIndex]} showButton={true} />
+                            </div>
+
+                            {/* Right Card - Tilted */}
+                            <div className="absolute right-0 md:right-12 lg:right-24 z-10 transform rotate-12 scale-75 opacity-70 transition-all duration-300 hover:opacity-90">
+                                <ManagerCard member={managers[getManagerIndex(1)]} />
+                            </div>
+
+                            {/* Navigation Arrows */}
+                            <button
+                                onClick={handlePrevManager}
+                                className="absolute left-4 z-30 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-sm flex items-center justify-center transition-all"
+                                aria-label="Previous manager"
+                            >
+                                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                                </svg>
+                            </button>
+
+                            <button
+                                onClick={handleNextManager}
+                                className="absolute right-4 z-30 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-sm flex items-center justify-center transition-all"
+                                aria-label="Next manager"
+                            >
+                                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                </svg>
+                            </button>
+                        </div>
                     </div>
-
-                    <div className="flex flex-wrap items-start justify-center gap-8 md:gap-12 lg:gap-16">
-                        {/* Left Manager */}
-                        <ManagerCard member={managers[0]} />
-
-                        {/* Center Manager with View Profile button */}
-                        <ManagerCard member={managers[1] || managers[0]} showButton={true} />
-
-                        {/* Right Manager */}
-                        <ManagerCard member={managers[2] || managers[0]} />
-                    </div>
                 </div>
-            </Section>
+            </div>
 
             {/* Footer section with Contact Us */}
 
