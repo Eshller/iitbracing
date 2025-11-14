@@ -24,7 +24,7 @@ const Header = () => {
   };
 
   return (
-    <div className="fixed top-0 left-0 w-full z-50 bg-[#0a0a0a] border-b border-[#7c3aed]/30">
+    <div className="fixed top-0 left-0 w-full z-50 bg-[#0a0a0a] border-b border-[#9D17A2]">
       <div className="flex justify-between items-center px-6 lg:px-12 xl:px-16 h-24">
         {/* Logo */}
         <a className="block w-[10rem] lg:w-[12rem]" href="/">
@@ -38,19 +38,23 @@ const Header = () => {
         </a>
 
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center gap-1">
-          {navigation.map((item) => (
-            <a
-              key={item.id}
-              href={item.url}
-              className={`relative px-5 text-sm font-medium uppercase tracking-wider transition-colors duration-200
-                ${item.url === pathname.pathname
-                  ? "text-white"
-                  : "text-white/70 hover:text-white"
-              }`}
-            >
-              {item.title}
-            </a>
+        <nav className="hidden lg:flex items-center">
+          {navigation.map((item, index) => (
+            <div key={item.id} className="flex items-center">
+              {index > 0 && (
+                <span className="h-4 w-px bg-white mx-3" />
+              )}
+              <a
+                href={item.url}
+                className={`text-sm font-normal text-white transition-colors duration-200 whitespace-nowrap
+                  ${item.url === pathname.pathname
+                    ? "font-semibold"
+                    : "hover:opacity-80"
+                }`}
+              >
+                {item.title}
+              </a>
+            </div>
           ))}
         </nav>
 
