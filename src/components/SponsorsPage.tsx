@@ -158,18 +158,29 @@ const SponsorsPage = () => {
                     </h2>
                     
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 max-w-5xl mx-auto">
-                        {goldSponsors.map((sponsor) => (
-                            <div key={sponsor.id} className="flex flex-col items-center text-center">
-                                <div className="mb-6 h-32 md:h-40 flex items-center justify-center">
-                                    <img 
-                                        src={sponsor.logo} 
-                                        alt={sponsor.name}
-                                        className="max-h-32 md:max-h-40 w-auto object-contain"
-                                    />
-                                </div>
-                                <p className="text-white text-base md:text-lg uppercase">{sponsor.name}</p>
+                        {/* Eshway */}
+                        <div className="flex flex-col items-center text-center  p-4">
+                            <div className="mb-6 h-32 md:h-40 flex items-center justify-center border-2 border-white rounded-full ">
+                                <img 
+                                    src="/6.png" 
+                                    alt="Eshway"
+                                    className="max-h-32 md:max-h-40 w-auto object-contain p-2" 
+                                />
                             </div>
-                        ))}
+                            <p className="text-white text-base md:text-lg uppercase">Eshway</p>
+                        </div>
+                        
+                        {/* Harness Techniques */}
+                        <div className="flex flex-col items-center text-center">
+                            <div className="mb-6 h-32 md:h-40 flex items-center justify-center">
+                                <img 
+                                    src="/5.png" 
+                                    alt="Harness Techniques"
+                                    className="max-h-32 md:max-h-40 w-auto object-contain"
+                                />
+                            </div>
+                            <p className="text-white text-base md:text-lg uppercase">Harness Techniques</p>
+                        </div>
                     </div>
                 </div>
             </section>
