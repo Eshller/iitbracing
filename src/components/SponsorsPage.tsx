@@ -1,5 +1,6 @@
 import React from 'react'
 import Header from './Header'
+import Footer from './Footer';
 
 // Sponsor categories
 const titleSponsor = {
@@ -31,44 +32,41 @@ const SponsorsPage = () => {
             
             {/* Hero Section with Background Image */}
             <section className="relative h-[70vh] min-h-[28rem] w-full overflow-hidden">
-                {/* Background Image - Replace '/sponsors-hero-bg.jpg' with your actual image path */}
+                {/* Background Image */}
                 <div
                     className="absolute inset-0 bg-center bg-cover bg-no-repeat"
                     style={{ 
                         backgroundImage: "url('/new/sponsor1.png')"
                     }}
                 />
-                {/* Fallback gradient if image not found */}
-                {/* <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900" /> */}
                 {/* Dark Overlay */}
                 <div className="absolute inset-0 bg-black/70" />
                 
                 {/* Overlaid Text */}
                 <div className="relative h-full flex flex-col items-center justify-center text-center px-4">
-                    <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-4 drop-shadow-xl">
+                    <h1 className="text-6xl md:text-7xl lg:text-8xl font-extrabold text-white mb-6 drop-shadow-xl">
                         Sponsors & Partners
                     </h1>
-                    <p className="text-xl md:text-2xl lg:text-3xl text-white font-semibold drop-shadow-lg">
+                    <p className="text-2xl md:text-3xl lg:text-4xl text-white font-semibold drop-shadow-lg">
                         Driven by Your Support
                     </p>
                 </div>
             </section>
 
             {/* Introduction Section */}
-            <section className="bg-black py-16 md:py-24">
+            <section className="bg-black">
                 <div className="container mx-auto px-4 md:px-8">
                     {/* Logo - Centered */}
-                    <div className="text-center mb-8">
+                    <div className="text-center">
                         <img 
                             src="/new/footer.png" 
                             alt="IIT Bombay Racing" 
-                            className="mx-auto w-96"
+                            className="mx-auto h-32 md:h-64 w-auto mb-6"
                         />
-
                     </div>
 
                     {/* Introduction Text - Left-aligned in centered container */}
-                    <div className="max-w-4xl mx-auto space-y-6 text-white text-base md:text-lg leading-relaxed text-left">
+                    <div className="max-w-4xl mx-auto space-y-6 text-white text-lg md:text-xl leading-relaxed text-left mb-12">
                         <p>
                             The success of the IIT Bombay Racing Team is made possible by our vital sponsors and community partners. We are powered by their generous contributions, whether through funding, products, or technical services.
                         </p>
@@ -78,11 +76,11 @@ const SponsorsPage = () => {
                     </div>
 
                     {/* Action Buttons - Centered */}
-                    <div className="flex flex-wrap justify-center space-x-44 mt-12">
-                        <button className="px-8 py-3 bg-[#2d3bff] text-white font-semibold uppercase rounded-3xl hover:bg-[#2430cc] transition-all">
+                    <div className="flex flex-wrap justify-center gap-6 md:gap-8">
+                        <button className="px-10 py-4 bg-[#2d3bff] text-white font-semibold text-base md:text-lg uppercase rounded-3xl hover:bg-[#2430cc] transition-all">
                             CONTACT US
                         </button>
-                        <button className="px-8 py-3 bg-[#2d3bff] text-white font-semibold uppercase rounded-3xl hover:bg-[#2430cc] transition-all">
+                        <button className="px-10 py-4 bg-[#2d3bff] text-white font-semibold text-base md:text-lg uppercase rounded-3xl hover:bg-[#2430cc] transition-all">
                             BROCHURE
                         </button>
                     </div>
@@ -92,18 +90,18 @@ const SponsorsPage = () => {
             {/* Title Sponsor Section */}
             <section className="bg-black ">
                 <div className="container mx-auto px-4 md:px-8">
-                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white uppercase text-center mb-12">
+                    <h2 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white uppercase text-center mb-16">
                         TITLE SPONSOR
                     </h2>
                     
-                    <div className="max-w-4xl mx-auto">
+                    <div className="max-w-5xl mx-auto">
                         {/* NRB Bearings Logo - Large */}
-                        <div className="flex items-center justify-center gap-4 mb-8">
-                            <img src='/new/sponsor2.png' alt='nrb bearings' className='w-96'/>
+                        <div className="flex items-center justify-center mb-10">
+                            <img src='/new/sponsor2.png' alt='nrb bearings' className='w-full max-w-2xl h-auto object-contain'/>
                         </div>
 
                         {/* Description */}
-                        <p className="text-white text-base md:text-lg leading-relaxed text-left">
+                        <p className="text-white text-lg md:text-xl leading-relaxed text-left">
                             {titleSponsor.description}
                         </p>
                     </div>
@@ -111,26 +109,26 @@ const SponsorsPage = () => {
             </section>
 
             {/* Platinum Sponsor Section */}
-            <section className="bg-black">
+            <section className="bg-black ">
                 <div className="container mx-auto px-4 md:px-8">
-                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white uppercase text-center mb-12">
+                    <h2 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white uppercase text-center mb-16">
                         PLATINUM SPONSOR
                     </h2>
                     
                     {/* Triangular Layout: 2 on top, 1 centered below */}
                     <div className="max-w-6xl mx-auto">
                         {/* Top Row - Two Logos Side by Side */}
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 mb-8 md:mb-12">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 mb-16">
                             {platinumSponsors.slice(0, 2).map((sponsor) => (
                                 <div key={sponsor.id} className="flex flex-col items-center text-center">
-                                    <div className="mb-4 h-24 flex items-center justify-center">
+                                    <div className="mb-6 h-32 md:h-40 flex items-center justify-center">
                                         <img 
                                             src={sponsor.logo} 
                                             alt={sponsor.name}
-                                            className="max-h-32 w-auto object-contain"
+                                            className="max-h-32 md:max-h-40 w-auto object-contain"
                                         />
                                     </div>
-                                    <p className="text-white text-sm md:text-base uppercase">{sponsor.name}</p>
+                                    <p className="text-white text-base md:text-lg uppercase">{sponsor.name}</p>
                                 </div>
                             ))}
                         </div>
@@ -138,14 +136,14 @@ const SponsorsPage = () => {
                         {/* Bottom Row - One Logo Centered */}
                         <div className="flex justify-center">
                             <div className="flex flex-col items-center text-center">
-                                <div className="mb-4 h-24 flex items-center justify-center">
+                                <div className="mb-6 h-40 md:h-48 flex items-center justify-center">
                                     <img 
                                         src={platinumSponsors[2].logo} 
                                         alt={platinumSponsors[2].name}
-                                        className="max-h-36 w-auto object-contain"
+                                        className="max-h-40 md:max-h-48 w-auto object-contain"
                                     />
                                 </div>
-                                <p className="text-white text-sm md:text-base uppercase">{platinumSponsors[2].name}</p>
+                                <p className="text-white text-base md:text-lg uppercase">{platinumSponsors[2].name}</p>
                             </div>
                         </div>
                     </div>
@@ -153,23 +151,23 @@ const SponsorsPage = () => {
             </section>
 
             {/* Gold Sponsor Section */}
-            <section className="bg-black py-16 md:py-24">
+            <section className="bg-black py-5">
                 <div className="container mx-auto px-4 md:px-8">
-                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white uppercase text-center mb-12">
+                    <h2 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white uppercase text-center mb-16">
                         GOLD SPONSOR
                     </h2>
                     
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 max-w-4xl mx-auto">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 max-w-5xl mx-auto">
                         {goldSponsors.map((sponsor) => (
                             <div key={sponsor.id} className="flex flex-col items-center text-center">
-                                <div className="mb-4 h-24 flex items-center justify-center">
+                                <div className="mb-6 h-32 md:h-40 flex items-center justify-center">
                                     <img 
                                         src={sponsor.logo} 
                                         alt={sponsor.name}
-                                        className="max-h-24 w-auto object-contain"
+                                        className="max-h-32 md:max-h-40 w-auto object-contain"
                                     />
                                 </div>
-                                <p className="text-white text-sm md:text-base uppercase">{sponsor.name}</p>
+                                <p className="text-white text-base md:text-lg uppercase">{sponsor.name}</p>
                             </div>
                         ))}
                     </div>
@@ -177,23 +175,23 @@ const SponsorsPage = () => {
             </section>
 
             {/* Silver Sponsor Section */}
-            <section className="bg-black py-16 md:py-24">
+            <section className="bg-black py-20 md:py-28">
                 <div className="container mx-auto px-4 md:px-8">
-                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white uppercase text-center mb-12">
+                    <h2 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white uppercase text-center mb-16">
                         SILVER SPONSOR
                     </h2>
                     
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 max-w-4xl mx-auto">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 max-w-5xl mx-auto">
                         {silverSponsors.map((sponsor) => (
                             <div key={sponsor.id} className="flex flex-col items-center text-center">
-                                <div className="mb-4 h-24 flex items-center justify-center">
+                                <div className="mb-6 h-32 md:h-40 flex items-center justify-center">
                                     <img 
                                         src={sponsor.logo} 
                                         alt={sponsor.name}
-                                        className="max-h-24 w-auto object-contain"
+                                        className="max-h-32 md:max-h-40 w-auto object-contain"
                                     />
                                 </div>
-                                <p className="text-white text-sm md:text-base uppercase">{sponsor.name}</p>
+                                <p className="text-white text-base md:text-lg uppercase">{sponsor.name}</p>
                             </div>
                         ))}
                     </div>
@@ -201,45 +199,7 @@ const SponsorsPage = () => {
             </section>
 
             {/* Footer/Contact Section */}
-            <section className="bg-black py-16 md:py-24">
-                {/* Purple Separator */}
-                <hr className="border-0 h-[2px] bg-gradient-to-r from-[#9D17A2] to-[#3A093C] mb-12" />
-                
-                <div className="container mx-auto px-4 md:px-8">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
-                        {/* Left Column - Team Info */}
-                        <div className="relative">
-                            <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
-                                Racing Team IIT Bombay
-                            </h3>
-                            <p className="text-white text-base md:text-lg leading-relaxed">
-                                IIT Bombay Racing is India's premier Formula Student Electric team with a vision to Revolutionize Electric Mobility in India.
-                            </p>
-                            {/* Background Logo - Semi-transparent */}
-                            <div className="absolute -z-10 opacity-10 top-0 left-0">
-                                <img 
-                                    src="/new/footer.png" 
-                                    alt="IIT Bombay Racing" 
-                                    className="h-48 w-auto"
-                                />
-                            </div>
-                        </div>
-
-                        {/* Right Column - Contact Info */}
-                        <div className="flex flex-col items-center md:items-start">
-                            <button className="px-8 py-3 bg-[#8b5cf6] hover:bg-[#7c3aed] text-white font-semibold text-lg md:text-xl rounded-full mb-6 transition-all duration-300 transform hover:scale-105 shadow-lg">
-                                Contact Us
-                            </button>
-                            <ul className="space-y-2 text-white text-base md:text-lg list-disc text-left">
-                                <li>tech@iitbombayracing.org</li>
-                                <li>+91 7875692712</li>
-                                <li>+91 9930779212</li>
-                                <li>IIT Bombay, Powai, 400076, India</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <Footer />
         </div>
     )
 }
