@@ -88,10 +88,10 @@ const ManagerCard = ({ member, showButton = false, className = '' }) => {
 
     return (
         <div className={`flex flex-col items-center text-center ${className}`}>
-            {/* Large Framed Photo */}
-            <div className="relative w-72 h-96 mb-6 rounded-lg overflow-hidden border-4 border-[#2a2a4a] shadow-2xl bg-[#1a1a2e]">
+            {/* Large Framed Photo with light gray border */}
+            <div className="relative w-72 h-96 mb-6 rounded-lg overflow-hidden border-2 border-gray-300 shadow-lg bg-gray-100">
                 {!isLoaded && (
-                    <div className="absolute inset-0 bg-gray-800 animate-pulse" />
+                    <div className="absolute inset-0 bg-gray-200 animate-pulse" />
                 )}
                 <img
                     src={member.image}
@@ -101,24 +101,18 @@ const ManagerCard = ({ member, showButton = false, className = '' }) => {
                 />
             </div>
 
-            {/* Name with rounded border */}
-            <div className="inline-block px-8 py-2 mb-3 border-2 border-white/30 rounded-full">
-                <h3 className="text-2xl font-semibold text-white uppercase tracking-wide">
+            {/* Name and View Profile Button on same line */}
+            <div className="flex items-center gap-4">
+                <h3 className="text-xl font-semibold text-white uppercase tracking-wide">
                     {member.name}
                 </h3>
+                {/* View Profile Button - only for center card */}
+                {showButton && (
+                    <button className="px-6 py-2 rounded-3xl bg-[#2d3bff] text-white text-base font-semibold shadow-lg hover:bg-[#2430cc] transition-all">
+                        VIEW PROFILE
+                    </button>
+                )}
             </div>
-
-            {/* Designation */}
-            <p className="text-xl font-bold text-white mb-4">
-                {member.designation}
-            </p>
-
-            {/* View Profile Button - only for center card */}
-            {showButton && (
-                <button className="px-8 py-3 rounded-full bg-[#2d3bff] text-white text-base font-semibold shadow-lg hover:bg-[#2430cc] transition-all">
-                    VIEW PROFILE
-                </button>
-            )}
         </div>
     );
 };
@@ -215,13 +209,16 @@ IIT Bombay Racing is Asia’s premier Formula Student team with over 80 dedicate
 
             {/* MANAGERS: carousel with tilted side cards */}
             <div className="w-full">
-                <hr className="border-0 h-[2px] bg-gradient-to-r from-[#9D17A2] to-[#3A093C]" />
-                <div className="bg-[#1a1a2e] py-12">
+                {/* Title on black background strip */}
+                <div className="bg-black py-8">
                     <div className="container mx-auto px-4 md:px-8">
-                        <div className="text-center mb-12">
-                            <h2 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-wide text-white uppercase">MANAGERS</h2>
-                        </div>
-
+                        <h2 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-wide text-white uppercase text-center">MANAGERS</h2>
+                    </div>
+                </div>
+                
+                {/* Dark purple background for carousel */}
+                <div className="bg-[#1a1a2e] py-16">
+                    <div className="container mx-auto px-4 md:px-8">
                         <div className="relative flex items-center justify-center min-h-[600px]">
                             {/* Left Card - Tilted */}
                             <div className="absolute left-0 md:left-12 lg:left-24 z-10 transform -rotate-12 scale-75 opacity-70 transition-all duration-300 hover:opacity-90">
