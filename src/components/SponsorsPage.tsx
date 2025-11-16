@@ -35,12 +35,11 @@ const SponsorsPage = () => {
                 <div
                     className="absolute inset-0 bg-center bg-cover bg-no-repeat"
                     style={{ 
-                        backgroundImage: "url('/sponsors-hero-bg.jpg')",
-                        filter: 'blur(2px)'
+                        backgroundImage: "url('/new/sponsor1.png')"
                     }}
                 />
                 {/* Fallback gradient if image not found */}
-                <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900" />
+                {/* <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900" /> */}
                 {/* Dark Overlay */}
                 <div className="absolute inset-0 bg-black/70" />
                 
@@ -63,19 +62,9 @@ const SponsorsPage = () => {
                         <img 
                             src="/new/footer.png" 
                             alt="IIT Bombay Racing" 
-                            className="mx-auto h-20 md:h-24 w-auto mb-4"
+                            className="mx-auto w-96"
                         />
-                        {/* NRB BEARINGS Sub-logo - Centered */}
-                        <div className="flex items-center justify-center gap-3 mb-8">
-                            <div className="w-12 h-12 rounded-full border-2 border-white flex items-center justify-center">
-                                <div className="w-8 h-8 rounded-full border border-white relative">
-                                    <div className="absolute inset-0 flex items-center justify-center">
-                                        <div className="w-2 h-2 bg-white rounded-full"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <span className="text-white font-bold text-lg md:text-xl">NRB BEARINGS</span>
-                        </div>
+
                     </div>
 
                     {/* Introduction Text - Left-aligned in centered container */}
@@ -89,11 +78,11 @@ const SponsorsPage = () => {
                     </div>
 
                     {/* Action Buttons - Centered */}
-                    <div className="flex flex-wrap justify-center gap-4 mt-12">
-                        <button className="px-8 py-3 bg-[#2d3bff] text-white font-semibold uppercase rounded-lg hover:bg-[#2430cc] transition-all">
+                    <div className="flex flex-wrap justify-center space-x-44 mt-12">
+                        <button className="px-8 py-3 bg-[#2d3bff] text-white font-semibold uppercase rounded-3xl hover:bg-[#2430cc] transition-all">
                             CONTACT US
                         </button>
-                        <button className="px-8 py-3 bg-[#2d3bff] text-white font-semibold uppercase rounded-lg hover:bg-[#2430cc] transition-all">
+                        <button className="px-8 py-3 bg-[#2d3bff] text-white font-semibold uppercase rounded-3xl hover:bg-[#2430cc] transition-all">
                             BROCHURE
                         </button>
                     </div>
@@ -101,7 +90,7 @@ const SponsorsPage = () => {
             </section>
 
             {/* Title Sponsor Section */}
-            <section className="bg-black py-16 md:py-24">
+            <section className="bg-black ">
                 <div className="container mx-auto px-4 md:px-8">
                     <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white uppercase text-center mb-12">
                         TITLE SPONSOR
@@ -110,17 +99,7 @@ const SponsorsPage = () => {
                     <div className="max-w-4xl mx-auto">
                         {/* NRB Bearings Logo - Large */}
                         <div className="flex items-center justify-center gap-4 mb-8">
-                            <div className="w-20 h-20 md:w-24 md:h-24 rounded-full border-2 border-white flex items-center justify-center">
-                                <div className="w-16 h-16 md:w-20 md:h-20 rounded-full border border-white relative">
-                                    <div className="absolute inset-0 flex items-center justify-center">
-                                        <div className="w-3 h-3 bg-white rounded-full"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="text-left">
-                                <div className="text-4xl md:text-5xl font-bold text-white uppercase">NRB</div>
-                                <div className="text-xl md:text-2xl font-bold text-white uppercase">BEARINGS</div>
-                            </div>
+                            <img src='/new/sponsor2.png' alt='nrb bearings' className='w-96'/>
                         </div>
 
                         {/* Description */}
@@ -132,7 +111,7 @@ const SponsorsPage = () => {
             </section>
 
             {/* Platinum Sponsor Section */}
-            <section className="bg-black py-16 md:py-24">
+            <section className="bg-black">
                 <div className="container mx-auto px-4 md:px-8">
                     <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white uppercase text-center mb-12">
                         PLATINUM SPONSOR
@@ -148,7 +127,7 @@ const SponsorsPage = () => {
                                         <img 
                                             src={sponsor.logo} 
                                             alt={sponsor.name}
-                                            className="max-h-24 w-auto object-contain"
+                                            className="max-h-32 w-auto object-contain"
                                         />
                                     </div>
                                     <p className="text-white text-sm md:text-base uppercase">{sponsor.name}</p>
@@ -163,7 +142,7 @@ const SponsorsPage = () => {
                                     <img 
                                         src={platinumSponsors[2].logo} 
                                         alt={platinumSponsors[2].name}
-                                        className="max-h-24 w-auto object-contain"
+                                        className="max-h-36 w-auto object-contain"
                                     />
                                 </div>
                                 <p className="text-white text-sm md:text-base uppercase">{platinumSponsors[2].name}</p>
